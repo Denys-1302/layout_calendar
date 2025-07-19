@@ -28,21 +28,22 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: background-color 0.5s, transform 0.5s;
+    transition:
+      background-color 0.5s,
+      transform 0.5s;
 
     &:hover {
       cursor: pointer;
-      background-color: #FFBFCB;
+      background-color: #ffbfcb;
       transform: translateY(-20px);
     }
   }
 
   @for $i from 1 through 31 {
     &__day:nth-child(#{$i})::before {
-      content: "#{$i}";
+      content: '#{$i}';
     }
   }
-
 
   @for $i from 28 through 30 {
     &.calendar--month-length-#{$i} {
@@ -52,8 +53,8 @@ body {
     }
   }
 
-
-  @each $day, $index in (mon: 0, tue: 1, wed: 2, thu: 3, fri: 4, sat: 5, sun: 6) {
+  @each $day, $index in (mon: 0, tue: 1, wed: 2, thu: 3, fri: 4, sat: 5, sun: 6)
+  {
     &.calendar--start-day-#{$day} {
       .calendar__day:first-child {
         margin-left: ($day-full-size + $gap-size) * $index;
