@@ -37,21 +37,21 @@ body {
     }
   }
 
-  // Numbering with ::before
+
   @for $i from 1 through 31 {
     &__day:nth-child(#{$i})::before {
       content: '#{$i}';
     }
   }
 
-  // Month length modifier
+
   @for $i from 28 through 30 {
     &--month-length-#{$i} &__day:nth-child(n + #{$i + 1}) {
       display: none;
     }
   }
 
-  // Start day modifier (Mon=0 ... Sun=6)
+
   @each $day, $index in (mon: 0, tue: 1, wed: 2, thu: 3, fri: 4, sat: 5, sun: 6)
   {
     &--start-day-#{$day} &__day:first-child {
