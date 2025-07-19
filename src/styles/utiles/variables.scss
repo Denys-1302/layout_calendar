@@ -1,0 +1,11 @@
+$day-size: 100px;
+$border-size: 1px;
+$gap-size: 1px;
+$columns: 7;
+$padding: 10px;
+$day-full-size: $day-size;
+$inner-width: $day-full-size * $columns + $gap-size * ($columns - 1);
+$total-width: $inner-width + $padding * 2;
+
+// $total-width: ($day-size + $border-size * 2) * $columns + $gap-size *
+//   ($columns - 1) + $padding * 2;
